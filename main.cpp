@@ -15,8 +15,11 @@ int main() {
     cin >> name;
     name[0] = toupper(name[0]);
   
-    // Using an if statement, determine the appropriate response depending on the users name.
-    if(name == "Brenden") {
+    // Using an if statement, determine the appropriate response depending on the users name. If the user types "stop" or "exit", exit the loop and stop the program.
+    if(name == "Exit" || name == "Stop") {
+      break;
+    }
+    else if(name == "Brenden") {
       cout << "Your name is " << name << ", and you ARE the owner of this program. ✅\n";
     }
     else {
